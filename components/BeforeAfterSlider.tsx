@@ -23,14 +23,14 @@ export function BeforeAfterSlider({
             src={beforeImage}
             alt="Before"
             style={{ objectFit: "cover" }}
-          }
+          />
         }
         itemTwo={
           <ReactCompareSliderImage
             src={afterImage}
             alt="After"
             style={{ objectFit: "cover" }}
-          }
+          />
         }
       />
       <div className="absolute left-4 top-4 rounded bg-black/70 px-3 py-1.5 text-sm font-semibold text-white">
