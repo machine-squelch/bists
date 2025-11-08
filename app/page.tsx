@@ -76,7 +76,7 @@ export default function Home() {
   ]
 
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       {/* Section 1: Hero */}
       <section
         id="home"
@@ -86,8 +86,9 @@ export default function Home() {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
+        aria-label="Hero section"
       >
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Reliable, On-Time, All-in-One Pool Care
@@ -99,12 +100,27 @@ export default function Home() {
             here.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="secondary" size="lg" className="text-lg px-8">
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              className="text-lg px-8"
+              onClick={() => {
+                document.getElementById("book")?.scrollIntoView({ behavior: "smooth" })
+              }}
+              aria-label="Get a free quote for pool services"
+            >
               Get a Free Quote
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 bg-white/10 border-white text-white hover:bg-white/20">
-              Book a Service Call
-            </Button>
+            <Link href="/book">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="text-lg px-8 bg-white/10 border-white text-white hover:bg-white/20"
+                aria-label="Book a service call"
+              >
+                Book a Service Call
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -113,9 +129,9 @@ export default function Home() {
       <TrustBadges />
 
       {/* Section 2: Services Overview */}
-      <section id="services" className="py-20 bg-background">
+      <section id="services" className="py-20 bg-background" aria-labelledby="services-heading">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             Your Complete &apos;AquiVida&apos; Solution
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -125,9 +141,11 @@ export default function Home() {
                 <Card
                   key={index}
                   className="hover:shadow-lg transition-shadow cursor-pointer"
+                  role="article"
+                  aria-label={service.title}
                 >
                   <CardHeader>
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4" aria-hidden="true">
                       <Icon className="h-6 w-6 text-primary" />
                     </div>
                     <CardTitle className="text-xl">{service.title}</CardTitle>
@@ -143,21 +161,22 @@ export default function Home() {
       </section>
 
       {/* Section 3: Social Proof (Testimonials) */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-muted" aria-labelledby="testimonials-heading">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             Hear From Your Neighbors
           </h2>
-          <Carousel className="max-w-4xl mx-auto">
+          <Carousel className="max-w-4xl mx-auto" aria-label="Customer testimonials">
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index}>
-                <Card className="mx-4">
+                <Card className="mx-4" role="article" aria-label={`Testimonial from ${testimonial.name}`}>
                   <CardHeader>
-                    <div className="flex gap-1 mb-4">
+                    <div className="flex gap-1 mb-4" aria-label={`${testimonial.rating} star rating`}>
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star
                           key={i}
                           className="h-5 w-5 fill-secondary text-secondary"
+                          aria-hidden="true"
                         />
                       ))}
                     </div>
@@ -181,9 +200,9 @@ export default function Home() {
       </section>
 
       {/* Section 4: Visual Proof */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background" aria-labelledby="visual-proof-heading">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 id="visual-proof-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             From Green to &apos;AquiVida&apos; Clean
           </h2>
           <div className="max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
@@ -198,14 +217,14 @@ export default function Home() {
       </section>
 
       {/* Section 5: How It Works */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-muted" aria-labelledby="how-it-works-heading">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 id="how-it-works-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             Your Simple Path to a Perfect Pool
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center">
+            <div className="text-center" role="article" aria-label="Step 1: Book or Get a Quote">
+              <div className="w-16 h-16 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center" aria-hidden="true">
                 <CalendarCheck className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">
@@ -216,8 +235,8 @@ export default function Home() {
                 calendar.
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center">
+            <div className="text-center" role="article" aria-label="Step 2: Bist's Tech Arrives On Time">
+              <div className="w-16 h-16 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center" aria-hidden="true">
                 <Truck className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">
@@ -228,8 +247,8 @@ export default function Home() {
                 No more guessing.
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center">
+            <div className="text-center" role="article" aria-label="Step 3: You Enjoy the AquiVida">
+              <div className="w-16 h-16 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center" aria-hidden="true">
                 <Check className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">
@@ -244,23 +263,23 @@ export default function Home() {
       </section>
 
       {/* Section 6: Dual-Conversion Final CTA */}
-      <section id="book" className="py-20 bg-background">
+      <section id="book" className="py-20 bg-background" aria-labelledby="cta-heading">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 id="cta-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             Ready to Start Your &apos;AquiVida&apos;?
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Left Column: Book Now */}
-            <Card className="p-8">
+            <Card className="p-8" role="region" aria-labelledby="book-now-title">
               <CardHeader>
-                <CardTitle className="text-2xl mb-4">Need Service Now?</CardTitle>
+                <CardTitle id="book-now-title" className="text-2xl mb-4">Need Service Now?</CardTitle>
                 <CardDescription className="text-base">
                   Book a confirmed service call or consultation. Pick a time on
                   our calendar, and we&apos;ll be there. Simple.
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Link href="/book">
+                <Link href="/book" aria-label="Book a service call on our calendar">
                   <Button
                     variant="default"
                     size="lg"
@@ -273,9 +292,9 @@ export default function Home() {
             </Card>
 
             {/* Right Column: Get Quote */}
-            <Card className="p-8">
+            <Card className="p-8" role="region" aria-labelledby="get-quote-title">
               <CardHeader>
-                <CardTitle className="text-2xl mb-4">Have Questions?</CardTitle>
+                <CardTitle id="get-quote-title" className="text-2xl mb-4">Have Questions?</CardTitle>
                 <CardDescription className="text-base">
                   Not sure what you need? Fill out our simple form, and our
                   owner, Bist, may personally call you back with a free,

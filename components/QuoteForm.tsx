@@ -40,22 +40,25 @@ export function QuoteForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" aria-label="Quote request form">
       <div>
         <label
           htmlFor="fullName"
           className="block text-sm font-medium text-foreground mb-2"
         >
-          Full Name <span className="text-red-500">*</span>
+          Full Name <span className="text-red-500" aria-label="required">*</span>
         </label>
         <Input
           id="fullName"
           {...register("fullName")}
           placeholder="John Doe"
           className={errors.fullName ? "border-red-500" : ""}
+          aria-required="true"
+          aria-invalid={errors.fullName ? "true" : "false"}
+          aria-describedby={errors.fullName ? "fullName-error" : undefined}
         />
         {errors.fullName && (
-          <p className="mt-1 text-sm text-red-500">
+          <p id="fullName-error" className="mt-1 text-sm text-red-500" role="alert">
             {errors.fullName.message}
           </p>
         )}
@@ -66,7 +69,7 @@ export function QuoteForm() {
           htmlFor="phone"
           className="block text-sm font-medium text-foreground mb-2"
         >
-          Phone <span className="text-red-500">*</span>
+          Phone <span className="text-red-500" aria-label="required">*</span>
         </label>
         <Input
           id="phone"
@@ -74,9 +77,14 @@ export function QuoteForm() {
           {...register("phone")}
           placeholder="(555) 123-4567"
           className={errors.phone ? "border-red-500" : ""}
+          aria-required="true"
+          aria-invalid={errors.phone ? "true" : "false"}
+          aria-describedby={errors.phone ? "phone-error" : undefined}
         />
         {errors.phone && (
-          <p className="mt-1 text-sm text-red-500">{errors.phone.message}</p>
+          <p id="phone-error" className="mt-1 text-sm text-red-500" role="alert">
+            {errors.phone.message}
+          </p>
         )}
       </div>
 
@@ -85,7 +93,7 @@ export function QuoteForm() {
           htmlFor="email"
           className="block text-sm font-medium text-foreground mb-2"
         >
-          Email <span className="text-red-500">*</span>
+          Email <span className="text-red-500" aria-label="required">*</span>
         </label>
         <Input
           id="email"
@@ -93,9 +101,14 @@ export function QuoteForm() {
           {...register("email")}
           placeholder="john@example.com"
           className={errors.email ? "border-red-500" : ""}
+          aria-required="true"
+          aria-invalid={errors.email ? "true" : "false"}
+          aria-describedby={errors.email ? "email-error" : undefined}
         />
         {errors.email && (
-          <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
+          <p id="email-error" className="mt-1 text-sm text-red-500" role="alert">
+            {errors.email.message}
+          </p>
         )}
       </div>
 
@@ -104,12 +117,15 @@ export function QuoteForm() {
           htmlFor="serviceNeeded"
           className="block text-sm font-medium text-foreground mb-2"
         >
-          Service Needed <span className="text-red-500">*</span>
+          Service Needed <span className="text-red-500" aria-label="required">*</span>
         </label>
         <Select
           id="serviceNeeded"
           {...register("serviceNeeded")}
           className={errors.serviceNeeded ? "border-red-500" : ""}
+          aria-required="true"
+          aria-invalid={errors.serviceNeeded ? "true" : "false"}
+          aria-describedby={errors.serviceNeeded ? "serviceNeeded-error" : undefined}
         >
           <option value="">Select a service...</option>
           <option value="weekly-cleaning">Weekly Cleaning</option>
@@ -120,7 +136,7 @@ export function QuoteForm() {
           <option value="other">Other</option>
         </Select>
         {errors.serviceNeeded && (
-          <p className="mt-1 text-sm text-red-500">
+          <p id="serviceNeeded-error" className="mt-1 text-sm text-red-500" role="alert">
             {errors.serviceNeeded.message}
           </p>
         )}
