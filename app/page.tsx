@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Carousel, CarouselItem } from "@/components/ui/carousel"
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider"
 import { QuoteForm } from "@/components/QuoteForm"
+import { VantaWaves } from "@/components/VantaWaves"
 import {
   Droplets,
   Wrench,
@@ -80,14 +81,10 @@ export default function Home() {
       {/* Section 1: Hero */}
       <section
         id="home"
-        className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-primary/20 via-primary/10 to-background"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?w=1920&q=80')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        className="relative min-h-[600px] flex items-center justify-center overflow-hidden"
         aria-label="Hero section"
       >
+        <VantaWaves />
         <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
