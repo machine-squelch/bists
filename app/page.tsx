@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { TrustBadges } from "@/components/TrustBadges"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -16,7 +17,7 @@ import {
   Star,
   CalendarCheck,
   Truck,
-  CheckCircle,
+  Check,
 } from "lucide-react"
 
 export default function Home() {
@@ -187,8 +188,8 @@ export default function Home() {
           </h2>
           <div className="max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
             <BeforeAfterSlider
-              beforeImage="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?w=1200&q=80&auto=format&fit=crop&crop=center"
-              afterImage="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?w=1200&q=80&auto=format&fit=crop&crop=center"
+              beforeImage="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?w=1200&q=80&auto=format&fit=crop&crop=center&sat=-50&brightness=0.7"
+              afterImage="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?w=1200&q=80&auto=format&fit=crop&crop=center&sat=20&brightness=1.1"
               beforeLabel="Before"
               afterLabel="After"
             />
@@ -229,7 +230,7 @@ export default function Home() {
             </div>
             <div className="text-center">
               <div className="w-16 h-16 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center">
-                <CheckCircle className="h-8 w-8 text-white" />
+                <Check className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">
                 You Enjoy the &apos;AquiVida&apos;
@@ -259,17 +260,15 @@ export default function Home() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button
-                  variant="default"
-                  size="lg"
-                  className="w-full"
-                  onClick={() => {
-                    // Link to booking page
-                    window.location.href = "/book"
-                  }}
-                >
-                  Find a Time Slot
-                </Button>
+                <Link href="/book">
+                  <Button
+                    variant="default"
+                    size="lg"
+                    className="w-full"
+                  >
+                    Find a Time Slot
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
