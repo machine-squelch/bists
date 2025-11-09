@@ -6,8 +6,8 @@ import { TrustBadges } from "@/components/TrustBadges"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Carousel, CarouselItem } from "@/components/ui/carousel"
 import { QuoteForm } from "@/components/QuoteForm"
-import { VantaWaves } from "@/components/VantaWaves"
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider"
+import Image from "next/image"
 import {
   Droplets,
   Wrench,
@@ -84,7 +84,16 @@ export default function Home() {
         className="relative min-h-[600px] flex items-center justify-center overflow-hidden"
         aria-label="Hero section"
       >
-        <VantaWaves />
+        <div className="absolute inset-0 w-full h-full" aria-hidden="true">
+          <Image 
+            src="/hero-back.gif" 
+            alt="" 
+            fill
+            className="object-cover"
+            priority
+            unoptimized
+          />
+        </div>
         <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -195,6 +204,17 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Separator 1 */}
+      <div className="relative w-full h-48 md:h-64 overflow-hidden">
+        <Image
+          src="/separator-1.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          aria-hidden="true"
+        />
+      </div>
+
       {/* Section 4: Visual Proof */}
       <section className="py-20 bg-background" aria-labelledby="visual-proof-heading">
         <div className="container mx-auto px-4">
@@ -203,14 +223,89 @@ export default function Home() {
           </h2>
           <div className="max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
             <BeforeAfterSlider
-              beforeImage="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?w=1200&h=800&q=80&auto=format&fit=crop&sat=-80&brightness=0.3&hue=140&contrast=0.6"
-              afterImage="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?w=1200&h=800&q=80&auto=format&fit=crop&sat=45&brightness=1.25&contrast=1.3"
+              beforeImage="/before.png"
+              afterImage="/after.png"
               beforeLabel="Before - Green Pool"
               afterLabel="After - Beautiful Pool"
             />
           </div>
         </div>
       </section>
+
+      {/* Section 4.5: Gallery */}
+      <section className="py-20 bg-muted" aria-labelledby="gallery-heading">
+        <div className="container mx-auto px-4">
+          <h2 id="gallery-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Our Work in Action
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <Image
+                src="/gallery-1.png"
+                alt="Pool service work"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <Image
+                src="/gallery-2.gif"
+                alt="Pool service work"
+                fill
+                className="object-cover"
+                unoptimized
+              />
+            </div>
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <Image
+                src="/gallery-3.gif"
+                alt="Pool service work"
+                fill
+                className="object-cover"
+                unoptimized
+              />
+            </div>
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <Image
+                src="/gallery-4.gif"
+                alt="Pool service work"
+                fill
+                className="object-cover"
+                unoptimized
+              />
+            </div>
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <Image
+                src="/gallery-5.gif"
+                alt="Pool service work"
+                fill
+                className="object-cover"
+                unoptimized
+              />
+            </div>
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+              <Image
+                src="/gallery-6.gif"
+                alt="Pool service work"
+                fill
+                className="object-cover"
+                unoptimized
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Separator 2 */}
+      <div className="relative w-full h-48 md:h-64 overflow-hidden">
+        <Image
+          src="/separator-2.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          aria-hidden="true"
+        />
+      </div>
 
       {/* Section 5: How It Works */}
       <section className="py-20 bg-muted" aria-labelledby="how-it-works-heading">
