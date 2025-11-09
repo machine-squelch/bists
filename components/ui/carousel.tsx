@@ -30,20 +30,20 @@ export function Carousel({ children, className }: CarouselProps) {
       <Button
         variant="outline"
         size="icon"
-        className="absolute left-2 top-1/2 -translate-y-1/2"
+        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-background/80 hover:bg-background shadow-lg"
         onClick={scrollPrev}
+        aria-label="Previous testimonial"
       >
         <ChevronLeft className="h-4 w-4" />
-        <span className="sr-only">Previous slide</span>
       </Button>
       <Button
         variant="outline"
         size="icon"
-        className="absolute right-2 top-1/2 -translate-y-1/2"
+        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-background/80 hover:bg-background shadow-lg"
         onClick={scrollNext}
+        aria-label="Next testimonial"
       >
         <ChevronRight className="h-4 w-4" />
-        <span className="sr-only">Next slide</span>
       </Button>
     </div>
   )
