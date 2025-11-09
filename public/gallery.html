@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#1e40af">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <title>Gallery - Bist's Aquivida Pool Care</title>
+    <meta name="description" content="View our portfolio of pool care projects, before and after photos, and see the quality of our work at Bist's Aquivida Pool Care.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="Bist's Aquivida Pool Care Logo" class="logo">
+                <span class="logo-text">Bist's Aquivida Pool Care</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link active">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"></button>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link cta-button">Get Free Quote</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Our Work Gallery</h1>
+                <p>See the quality and craftsmanship of our pool care services</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="cleaning">Pool Cleaning</button>
+                <button class="filter-btn" data-filter="repair">Repairs</button>
+                <button class="filter-btn" data-filter="installation">Installation</button>
+                <button class="filter-btn" data-filter="maintenance">Maintenance</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Pool Cleaning Projects -->
+                <div class="gallery-item" data-category="cleaning">
+                    <img src="gallery-1.png" alt="Pool Cleaning Service" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Pool Cleaning Service</h4>
+                            <p>Professional weekly maintenance</p>
+                            <div class="gallery-tags">
+                                <span class="tag">Cleaning</span>
+                                <span class="tag">Maintenance</span>
+                            </div>
+                        </div>
+                        <button class="gallery-btn" onclick="openLightbox(this)">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="cleaning">
+                    <img src="gallery-2.gif" alt="Pool Service Excellence" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Service Excellence</h4>
+                            <p>Comprehensive pool care</p>
+                            <div class="gallery-tags">
+                                <span class="tag">Cleaning</span>
+                                <span class="tag">Service</span>
+                            </div>
+                        </div>
+                        <button class="gallery-btn" onclick="openLightbox(this)">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Repair Projects -->
+                <div class="gallery-item" data-category="repair">
+                    <img src="gallery-3.gif" alt="Pool Equipment Repair" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Equipment Repair</h4>
+                            <p>Expert repair and maintenance services</p>
+                            <div class="gallery-tags">
+                                <span class="tag">Repair</span>
+                                <span class="tag">Equipment</span>
+                            </div>
+                        </div>
+                        <button class="gallery-btn" onclick="openLightbox(this)">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Maintenance Projects -->
+                <div class="gallery-item" data-category="maintenance">
+                    <img src="gallery-4.gif" alt="Pool Maintenance Set" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Maintenance Package</h4>
+                            <p>Complete care and maintenance</p>
+                            <div class="gallery-tags">
+                                <span class="tag">Maintenance</span>
+                                <span class="tag">Package</span>
+                            </div>
+                        </div>
+                        <button class="gallery-btn" onclick="openLightbox(this)">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="cleaning">
+                    <img src="gallery-5.gif" alt="Pool Care Service" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Pool Care Service</h4>
+                            <p>Professional maintenance service</p>
+                            <div class="gallery-tags">
+                                <span class="tag">Cleaning</span>
+                                <span class="tag">Care</span>
+                            </div>
+                        </div>
+                        <button class="gallery-btn" onclick="openLightbox(this)">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="repair">
+                    <img src="gallery-6.gif" alt="Pool Service Repair" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Service Repair</h4>
+                            <p>Expert repair and maintenance</p>
+                            <div class="gallery-tags">
+                                <span class="tag">Repair</span>
+                                <span class="tag">Service</span>
+                            </div>
+                        </div>
+                        <button class="gallery-btn" onclick="openLightbox(this)">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="maintenance">
+                    <img src="aquivida-pool-jeff-5/vecteezy_swimming-pool-maintenance-set_21841713.jpg" alt="Pool Maintenance" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Pool Maintenance</h4>
+                            <p>Regular maintenance and care</p>
+                            <div class="gallery-tags">
+                                <span class="tag">Maintenance</span>
+                                <span class="tag">Regular</span>
+                            </div>
+                        </div>
+                        <button class="gallery-btn" onclick="openLightbox(this)">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Section -->
+    <section class="before-after">
+        <div class="container">
+            <div class="section-header">
+                <h2>Before & After</h2>
+                <p>See the transformation we can achieve</p>
+            </div>
+            <div class="before-after-grid">
+                <div class="before-after-item">
+                    <div class="before-after-content">
+                        <div class="before-after-image">
+                            <img src="aquivida-pool-jeff-1/vecteezy_isolated-empty-pool-on-white-background_7208579.jpg" alt="Before" class="before-img">
+                            <div class="before-after-label">Before</div>
+                        </div>
+                        <div class="before-after-image">
+                            <img src="aquivida-pool-jeff-3/vecteezysummer-activity-swimming-background-hs0521_generated.jpg" alt="After" class="after-img">
+                            <div class="before-after-label">After</div>
+                        </div>
+                    </div>
+                    <div class="before-after-info">
+                        <h3>Pool Restoration</h3>
+                        <p>Complete transformation from neglected to pristine condition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Pool?</h2>
+                <p>Let us show you what we can do for your pool. Contact us today for a free consultation.</p>
+                <div class="cta-buttons">
+                    <a href="index.html#contact" class="btn btn-primary">Get Free Quote</a>
+                    <a href="index.html#services" class="btn btn-secondary">View Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Bist's Aquivida Pool Care Logo" class="logo">
+                        <span class="logo-text">Bist's Aquivida Pool Care</span>
+                    </div>
+                    <p>Professional pool care services you can trust. Licensed, insured, and committed to excellence.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Pool Cleaning</a></li>
+                        <li><a href="index.html#services">Pool Repairs</a></li>
+                        <li><a href="index.html#services">Pool Installation</a></li>
+                        <li><a href="index.html#services">Green Pool Recovery</a></li>
+                        <li><a href="index.html#services">Heater Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> 916-849-0162</p>
+                        <p><i class="fas fa-envelope"></i> jeff@bistsaquividapoolcare.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Local Service Area</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bist's Aquivida Pool Care. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Gallery filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const filter = this.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            item.style.animation = 'fadeInScale 0.5s ease forwards';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+
+        // Enhanced lightbox function
+        function openLightbox(button) {
+            const galleryItem = button.closest('.gallery-item');
+            const img = galleryItem.querySelector('.gallery-img');
+            const title = galleryItem.querySelector('h4').textContent;
+            const description = galleryItem.querySelector('p').textContent;
+            
+            createLightbox(img.src, title, description);
+        }
+    </script>
+</body>
+</html>
