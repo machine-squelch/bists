@@ -26,6 +26,11 @@ jobs:
       - name: Build Next.js app
         run: npm run build
 
+      - name: Remove .env files from build
+        run: |
+          find ./out -name ".env*" -type f -delete || true
+          find ./out -name "*.env" -type f -delete || true
+
       - name: Deploy to DreamHost via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -34,3 +39,8 @@ jobs:
           password: ${{ secrets.DREAMHOST_FTP_PASSWORD }}
           local-dir: ./out/
           server-dir: ${{ secrets.DREAMHOST_DEPLOY_PATH }}
+          exclude: |
+            **/.env*
+            **/*.env
+            **/.git*
+            **/node_modules/**
