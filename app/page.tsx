@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Carousel, CarouselItem } from "@/components/ui/carousel"
 import { QuoteForm } from "@/components/QuoteForm"
 import { VantaWaves } from "@/components/VantaWaves"
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider"
 import {
   Droplets,
   Wrench,
@@ -57,19 +58,19 @@ export default function Home() {
   const testimonials = [
     {
       rating: 5,
-      text: "We've finally found a reliable service! Jeff Bist's Aquivida is always on time, and our pool has never looked better. The team is professional, friendly, and truly cares about our pool.",
+      text: "We've finally found a reliable service! Bist's Aquivida is always on time, and our pool has never looked better. The team is professional, friendly, and truly cares about our pool.",
       name: "Sarah",
       location: "Local Customer",
     },
     {
       rating: 5,
-      text: "After years of dealing with unreliable pool services, Jeff Bist's Aquivida has been a game-changer. They show up when they say they will, and the quality of work is outstanding.",
+      text: "After years of dealing with unreliable pool services, Bist's Aquivida has been a game-changer. They show up when they say they will, and the quality of work is outstanding.",
       name: "Michael",
       location: "Local Customer",
     },
     {
       rating: 5,
-      text: "Jeff personally called me back after I filled out the quote form. That personal touch means everything. Our pool is now the envy of the neighborhood!",
+      text: "Bist personally called me back after I filled out the quote form. That personal touch means everything. Our pool is now the envy of the neighborhood!",
       name: "Jennifer",
       location: "Local Customer",
     },
@@ -90,7 +91,7 @@ export default function Home() {
             The Most Reliable, On-Time Pool Service. All-in-One.
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
-            Jeff Bist&apos;s Aquivida Pool Care is your trusted, local expert for
+            Bist&apos;s Aquivida Pool Care is your trusted, local expert for
             cleaning, repairs, and maintenance. We show up on time. We do it all.
             Stop worrying about your pool and start enjoying it.
           </p>
@@ -194,7 +195,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 4: How It Works */}
+      {/* Section 4: Visual Proof */}
+      <section className="py-20 bg-background" aria-labelledby="visual-proof-heading">
+        <div className="container mx-auto px-4">
+          <h2 id="visual-proof-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
+            From Green to &apos;Aquivida&apos; Clean
+          </h2>
+          <div className="max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+            <BeforeAfterSlider
+              beforeImage="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?w=1200&h=800&q=80&auto=format&fit=crop&sat=-70&brightness=0.4&hue=130&contrast=0.7"
+              afterImage="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?w=1200&h=800&q=80&auto=format&fit=crop&sat=35&brightness=1.15&contrast=1.2"
+              beforeLabel="Before - Green Pool"
+              afterLabel="After - Beautiful Pool"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Section 5: How It Works */}
       <section className="py-20 bg-muted" aria-labelledby="how-it-works-heading">
         <div className="container mx-auto px-4">
           <h2 id="how-it-works-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -213,12 +231,12 @@ export default function Home() {
                 calendar.
               </p>
             </div>
-            <div className="text-center" role="article" aria-label="Step 2: Jeff's Tech Arrives On Time">
+            <div className="text-center" role="article" aria-label="Step 2: Bist's Tech Arrives On Time">
               <div className="w-16 h-16 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center" aria-hidden="true">
                 <Truck className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">
-                Jeff&apos;s Tech Arrives On Time
+                Bist&apos;s Tech Arrives On Time
               </h3>
               <p className="text-gray-600">
                 A certified, friendly technician arrives on your scheduled day.
@@ -275,7 +293,7 @@ export default function Home() {
                 <CardTitle id="get-quote-title" className="text-2xl mb-4">Have Questions?</CardTitle>
                 <CardDescription className="text-base">
                   Not sure what you need? Fill out our simple form, and our
-                  owner, Jeff, may personally call you back with a free,
+                  owner, Bist, may personally call you back with a free,
                   no-hassle quote.
                 </CardDescription>
               </CardHeader>

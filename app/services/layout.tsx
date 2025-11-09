@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Pool Services | Jeff Bist's Aquivida Pool Care",
+  title: "Pool Services | Bist's Aquivida Pool Care",
   description: "Comprehensive pool care services including weekly cleaning, equipment repair, pool opening/closing, and more. Expert service backed by our On-Time Guarantee.",
 }
 

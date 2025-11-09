@@ -21,8 +21,8 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="#home" className="text-xl font-bold text-primary" aria-label="Jeff Bist's Aquivida Pool Care - Home">
-              Jeff Bist&apos;s Aquivida Pool Care
+            <a href="#home" className="text-xl font-bold text-primary" aria-label="Bist's Aquivida Pool Care - Home">
+              Bist&apos;s Aquivida Pool Care
             </a>
           </div>
 

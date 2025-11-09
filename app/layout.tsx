@@ -16,12 +16,12 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Jeff Bist's Aquivida Pool Care | The Most Reliable, On-Time Pool Service",
-  description: "Jeff Bist's Aquivida Pool Care offers expert, all-in-one pool cleaning, repair, and maintenance. Get your free quote or book your service online today. Always on time. Always reliable.",
-  keywords: ["pool service", "pool cleaning", "pool repair", "pool maintenance", "Aquivida", "Jeff Bist"],
+  title: "Bist's Aquivida Pool Care | The Most Reliable, On-Time Pool Service",
+  description: "Bist's Aquivida Pool Care offers expert, all-in-one pool cleaning, repair, and maintenance. Get your free quote or book your service online today. Always on time. Always reliable.",
+  keywords: ["pool service", "pool cleaning", "pool repair", "pool maintenance", "Aquivida", "Bist"],
   openGraph: {
-    title: "Jeff Bist's Aquivida Pool Care | The Most Reliable, On-Time Pool Service",
-    description: "Jeff Bist's Aquivida Pool Care offers expert, all-in-one pool cleaning, repair, and maintenance.",
+    title: "Bist's Aquivida Pool Care | The Most Reliable, On-Time Pool Service",
+    description: "Bist's Aquivida Pool Care offers expert, all-in-one pool cleaning, repair, and maintenance.",
     type: "website",
   },
 };

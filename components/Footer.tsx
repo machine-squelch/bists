@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Jeff Bist&apos;s Aquivida Pool Care</h3>
+            <h3 className="text-xl font-bold mb-4">Bist&apos;s Aquivida Pool Care</h3>
             <p className="text-gray-300 mb-4">
               The most reliable, on-time pool service. All-in-one pool care you can trust.
             </p>
@@ -64,7 +64,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} Jeff Bist&apos;s Aquivida Pool Care. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Bist&apos;s Aquivida Pool Care. All rights reserved.</p>
           <p className="mt-2">Licensed & Insured | On-Time Guarantee</p>
         </div>
       </div>

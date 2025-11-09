@@ -92,7 +92,7 @@ export default function ServicesPage() {
           </h1>
           <p className="text-lg md:text-xl text-center text-gray-600 max-w-3xl mx-auto">
             Comprehensive pool care services designed to keep your pool pristine
-            and your life stress-free. All services backed by Jeff&apos;s
+            and your life stress-free. All services backed by Bist&apos;s
             On-Time Guarantee.
           </p>
         </div>
@@ -176,7 +176,7 @@ export default function ServicesPage() {
                 <CardTitle className="text-2xl mb-4">Have Questions?</CardTitle>
                 <CardDescription className="text-base">
                   Not sure what you need? Fill out our simple form, and our
-                  owner, Jeff, may personally call you back with a free,
+                  owner, Bist, may personally call you back with a free,
                   no-hassle quote.
                 </CardDescription>
               </CardHeader>
