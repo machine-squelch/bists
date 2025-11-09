@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button"
 import { TrustBadges } from "@/components/TrustBadges"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Carousel, CarouselItem } from "@/components/ui/carousel"
-import { BeforeAfterSlider } from "@/components/BeforeAfterSlider"
 import { QuoteForm } from "@/components/QuoteForm"
 import { VantaWaves } from "@/components/VantaWaves"
 import {
@@ -195,24 +194,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 4: Visual Proof */}
-      <section className="py-20 bg-background" aria-labelledby="visual-proof-heading">
-        <div className="container mx-auto px-4">
-          <h2 id="visual-proof-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
-            From Green to &apos;Aquivida&apos; Clean
-          </h2>
-          <div className="max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
-            <BeforeAfterSlider
-              beforeImage="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?w=1200&h=800&q=80&auto=format&fit=crop&sat=-50&brightness=0.6&hue=120"
-              afterImage="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?w=1200&h=800&q=80&auto=format&fit=crop&sat=40&brightness=1.2&contrast=1.1"
-              beforeLabel="Before - Green Pool"
-              afterLabel="After - Beautiful Pool"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Section 5: How It Works */}
+      {/* Section 4: How It Works */}
       <section className="py-20 bg-muted" aria-labelledby="how-it-works-heading">
         <div className="container mx-auto px-4">
           <h2 id="how-it-works-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
