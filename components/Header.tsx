@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import { Menu, Waves } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent } from "@/components/ui/sheet"
@@ -9,10 +10,13 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#services", label: "Services" },
-    { href: "#about", label: "About" },
-    { href: "#book", label: "Book Now" },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/services", label: "Services" },
+    { href: "/gallery", label: "Gallery" },
+    { href: "/resources", label: "Resources" },
+    { href: "/book", label: "Book Now" },
+    { href: "/contact", label: "Contact" },
   ]
 
   return (
@@ -21,8 +25,8 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <a 
-              href="#home" 
+            <Link 
+              href="/"
               className="flex items-center gap-2 group" 
               aria-label="Bist's Aquivida Pool Care - Home"
             >
@@ -38,19 +42,19 @@ export function Header() {
                   Pool Care
                 </span>
               </div>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex md:flex-1 md:items-center md:justify-center md:gap-8" aria-label="Main navigation">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="text-sm font-medium text-foreground hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded px-2 py-1"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -120,14 +124,14 @@ export function Header() {
             {/* Mobile Navigation Links */}
             <nav className="flex flex-col gap-4" aria-label="Mobile navigation">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   className="text-base font-medium text-foreground hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded px-2 py-1"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>

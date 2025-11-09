@@ -46,6 +46,67 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Quick Links */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+            <nav className="flex flex-col gap-2" aria-label="Footer navigation">
+              <a
+                href="/"
+                className="text-gray-300 hover:text-white transition-colors"
+              >
+                Home
+              </a>
+              <a
+                href="/about"
+                className="text-gray-300 hover:text-white transition-colors"
+              >
+                About
+              </a>
+              <a
+                href="/services"
+                className="text-gray-300 hover:text-white transition-colors"
+              >
+                Services
+              </a>
+            </nav>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-4">&nbsp;</h3>
+            <nav className="flex flex-col gap-2" aria-label="Footer navigation">
+              <a
+                href="/gallery"
+                className="text-gray-300 hover:text-white transition-colors"
+              >
+                Gallery
+              </a>
+              <a
+                href="/resources"
+                className="text-gray-300 hover:text-white transition-colors"
+              >
+                Resources
+              </a>
+              <a
+                href="/book"
+                className="text-gray-300 hover:text-white transition-colors"
+              >
+                Book Now
+              </a>
+            </nav>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-4">&nbsp;</h3>
+            <nav className="flex flex-col gap-2" aria-label="Footer navigation">
+              <a
+                href="/contact"
+                className="text-gray-300 hover:text-white transition-colors"
+              >
+                Contact
+              </a>
+            </nav>
+          </div>
+        </div>
+
         {/* Copyright */}
         <div className="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
           <p>&copy; {new Date().getFullYear()} Bist&apos;s Aquivida Pool Care. All rights reserved.</p>
