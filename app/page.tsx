@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Carousel, CarouselItem } from "@/components/ui/carousel"
 import { QuoteForm } from "@/components/QuoteForm"
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider"
+import { VantaWaves } from "@/components/VantaWaves"
 import Image from "next/image"
 import {
   Droplets,
@@ -84,16 +85,7 @@ export default function Home() {
         className="relative min-h-[600px] flex items-center justify-center overflow-hidden"
         aria-label="Hero section"
       >
-        <div className="absolute inset-0 w-full h-full" aria-hidden="true">
-          <Image 
-            src="/hero-back.gif" 
-            alt="" 
-            fill
-            className="object-cover"
-            priority
-            unoptimized
-          />
-        </div>
+        <VantaWaves />
         <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
