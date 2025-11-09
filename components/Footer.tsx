@@ -36,29 +36,13 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Service Areas */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-            <nav className="flex flex-col gap-2" aria-label="Footer navigation">
-              <a
-                href="#home"
-                className="text-gray-300 hover:text-white transition-colors"
-              >
-                Home
-              </a>
-              <a
-                href="/services"
-                className="text-gray-300 hover:text-white transition-colors"
-              >
-                Services
-              </a>
-              <a
-                href="/book"
-                className="text-gray-300 hover:text-white transition-colors"
-              >
-                Book Now
-              </a>
-            </nav>
+            <h3 className="text-xl font-bold mb-4">Service Areas</h3>
+            <p className="text-gray-300 text-sm mb-2">Proudly serving:</p>
+            <p className="text-gray-300 text-sm leading-relaxed">
+              Rocklin, Roseville, Lincoln, Citrus Heights, Orangevale, Antelope, Granite Bay, Placer County, Sacramento County
+            </p>
           </div>
         </div>
 

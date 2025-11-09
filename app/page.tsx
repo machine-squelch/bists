@@ -99,10 +99,13 @@ export default function Home() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             The Most Reliable, On-Time Pool Service. All-in-One.
           </h1>
-          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl mb-4 max-w-3xl mx-auto">
             Bist&apos;s Aquivida Pool Care is your trusted, local expert for
             cleaning, repairs, and maintenance. We show up on time. We do it all.
             Stop worrying about your pool and start enjoying it.
+          </p>
+          <p className="text-base md:text-lg mb-8 max-w-3xl mx-auto text-white/90">
+            Serving: Rocklin, Roseville, Lincoln, Citrus Heights, Orangevale, Antelope, Granite Bay, Placer County, Sacramento County
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -132,6 +135,20 @@ export default function Home() {
 
       {/* Trust Badges - Below Fold */}
       <TrustBadges />
+
+      {/* Service Areas Banner */}
+      <section className="py-8 bg-primary text-white" aria-labelledby="service-areas-heading">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <p className="text-sm md:text-base font-medium mb-2" id="service-areas-heading">
+              Proudly Serving:
+            </p>
+            <p className="text-base md:text-lg font-semibold">
+              Rocklin • Roseville • Lincoln • Citrus Heights • Orangevale • Antelope • Granite Bay • Placer County • Sacramento County
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Section 2: Services Overview */}
       <section id="services" className="py-20 bg-background" aria-labelledby="services-heading">

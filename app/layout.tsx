@@ -17,11 +17,11 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "Bist's Aquivida Pool Care | The Most Reliable, On-Time Pool Service",
-  description: "Bist's Aquivida Pool Care offers expert, all-in-one pool cleaning, repair, and maintenance. Get your free quote or book your service online today. Always on time. Always reliable.",
-  keywords: ["pool service", "pool cleaning", "pool repair", "pool maintenance", "Aquivida", "Bist"],
+  description: "Bist's Aquivida Pool Care offers expert, all-in-one pool cleaning, repair, and maintenance. Serving Rocklin, Roseville, Lincoln, Citrus Heights, Orangevale, Antelope, Granite Bay, Placer County, and Sacramento County. Get your free quote or book your service online today. Always on time. Always reliable.",
+  keywords: ["pool service", "pool cleaning", "pool repair", "pool maintenance", "Aquivida", "Bist", "Rocklin", "Roseville", "Lincoln", "Citrus Heights", "Orangevale", "Antelope", "Granite Bay", "Placer County", "Sacramento County"],
   openGraph: {
     title: "Bist's Aquivida Pool Care | The Most Reliable, On-Time Pool Service",
-    description: "Bist's Aquivida Pool Care offers expert, all-in-one pool cleaning, repair, and maintenance.",
+    description: "Bist's Aquivida Pool Care offers expert, all-in-one pool cleaning, repair, and maintenance. Serving Rocklin, Roseville, Lincoln, Citrus Heights, Orangevale, Antelope, Granite Bay, Placer County, and Sacramento County.",
     type: "website",
   },
 };
