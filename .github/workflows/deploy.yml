@@ -26,6 +26,15 @@ jobs:
       - name: Build Next.js app
         run: npm run build
 
+      - name: Verify build output
+        run: |
+          echo "Build output contents:"
+          ls -la ./out/ | head -20
+          echo "Checking for index.html:"
+          ls -la ./out/index.html || echo "index.html not found!"
+          echo "Checking pages:"
+          ls -la ./out/about/ || echo "about directory not found!"
+
       - name: Remove .env files from build
         run: |
           find ./out -name ".env*" -type f -delete || true
