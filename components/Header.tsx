@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Menu } from "lucide-react"
+import { Menu, Waves } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent } from "@/components/ui/sheet"
 
@@ -21,8 +21,23 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="#home" className="text-xl font-bold text-primary" aria-label="Bist's Aquivida Pool Care - Home">
-              Bist&apos;s Aquivida Pool Care
+            <a 
+              href="#home" 
+              className="flex items-center gap-2 group" 
+              aria-label="Bist's Aquivida Pool Care - Home"
+            >
+              <div className="relative">
+                <Waves className="h-8 w-8 text-primary group-hover:text-primary-dark transition-colors" />
+                <div className="absolute inset-0 bg-primary/10 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-lg font-heading font-bold text-primary leading-tight">
+                  Bist&apos;s Aquivida
+                </span>
+                <span className="text-xs font-medium text-gray-600 leading-tight">
+                  Pool Care
+                </span>
+              </div>
             </a>
           </div>
 
