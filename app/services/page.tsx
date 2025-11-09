@@ -88,11 +88,11 @@ export default function ServicesPage() {
       <section className="bg-gradient-to-br from-primary/10 via-primary/5 to-background py-20">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6">
-            Our Expert &apos;AquiVida&apos; Pool Services
+            Our Expert &apos;Aquivida&apos; Pool Services
           </h1>
           <p className="text-lg md:text-xl text-center text-gray-600 max-w-3xl mx-auto">
             Comprehensive pool care services designed to keep your pool pristine
-            and your life stress-free. All services backed by Bist&apos;s
+            and your life stress-free. All services backed by Jeff&apos;s
             On-Time Guarantee.
           </p>
         </div>
@@ -176,7 +176,7 @@ export default function ServicesPage() {
                 <CardTitle className="text-2xl mb-4">Have Questions?</CardTitle>
                 <CardDescription className="text-base">
                   Not sure what you need? Fill out our simple form, and our
-                  owner, Bist, may personally call you back with a free,
+                  owner, Jeff, may personally call you back with a free,
                   no-hassle quote.
                 </CardDescription>
               </CardHeader>

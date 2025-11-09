@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -15,12 +16,12 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Bist's AquiVida Pool Care | Reliable, On-Time Pool Service",
-  description: "Bist's AquiVida Pool Care offers expert, all-in-one pool cleaning, repair, and maintenance. Get your free quote or book your service online today.",
-  keywords: ["pool service", "pool cleaning", "pool repair", "pool maintenance", "AquiVida"],
+  title: "Jeff Bist's Aquivida Pool Care | The Most Reliable, On-Time Pool Service",
+  description: "Jeff Bist's Aquivida Pool Care offers expert, all-in-one pool cleaning, repair, and maintenance. Get your free quote or book your service online today. Always on time. Always reliable.",
+  keywords: ["pool service", "pool cleaning", "pool repair", "pool maintenance", "Aquivida", "Jeff Bist"],
   openGraph: {
-    title: "Bist's AquiVida Pool Care | Reliable, On-Time Pool Service",
-    description: "Bist's AquiVida Pool Care offers expert, all-in-one pool cleaning, repair, and maintenance.",
+    title: "Jeff Bist's Aquivida Pool Care | The Most Reliable, On-Time Pool Service",
+    description: "Jeff Bist's Aquivida Pool Care offers expert, all-in-one pool cleaning, repair, and maintenance.",
     type: "website",
   },
 };
@@ -41,6 +42,7 @@ export default function RootLayout({
         </a>
         <Header />
         <div id="main-content">{children}</div>
+        <Footer />
       </body>
     </html>
   );

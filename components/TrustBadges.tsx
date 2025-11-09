@@ -12,7 +12,7 @@ export function TrustBadges() {
     },
     {
       icon: Clock,
-      text: "Bist's On-Time Guarantee",
+      text: "Jeff's On-Time Guarantee",
     },
   ]
 

@@ -9,7 +9,7 @@ export default function BookPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Book Your &apos;AquiVida&apos; Service Call
+              Book Your &apos;Aquivida&apos; Service Call
             </h1>
             <p className="text-lg md:text-xl text-gray-600">
               Pick a time that works for you. We&apos;ll send a confirmation

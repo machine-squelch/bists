@@ -58,21 +58,21 @@ export default function Home() {
   const testimonials = [
     {
       rating: 5,
-      text: "We've finally found a reliable service! Bist's AquiVida is always on time, and our pool has never looked better. The team is professional, friendly, and truly cares about our pool.",
-      name: "Sarah Johnson",
-      location: "Miami, FL",
+      text: "We've finally found a reliable service! Jeff Bist's Aquivida is always on time, and our pool has never looked better. The team is professional, friendly, and truly cares about our pool.",
+      name: "Sarah",
+      location: "Local Customer",
     },
     {
       rating: 5,
-      text: "After years of dealing with unreliable pool services, Bist's AquiVida has been a game-changer. They show up when they say they will, and the quality of work is outstanding.",
-      name: "Michael Rodriguez",
-      location: "Fort Lauderdale, FL",
+      text: "After years of dealing with unreliable pool services, Jeff Bist's Aquivida has been a game-changer. They show up when they say they will, and the quality of work is outstanding.",
+      name: "Michael",
+      location: "Local Customer",
     },
     {
       rating: 5,
-      text: "Bist personally called me back after I filled out the quote form. That personal touch means everything. Our pool is now the envy of the neighborhood!",
-      name: "Jennifer Martinez",
-      location: "West Palm Beach, FL",
+      text: "Jeff personally called me back after I filled out the quote form. That personal touch means everything. Our pool is now the envy of the neighborhood!",
+      name: "Jennifer",
+      location: "Local Customer",
     },
   ]
 
@@ -88,13 +88,12 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Reliable, On-Time, All-in-One Pool Care
+            The Most Reliable, On-Time Pool Service. All-in-One.
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
-            Bist&apos;s AquiVida Pool Care is your trusted, local expert for
-            cleaning, repairs, and maintenance. Stop worrying about your pool
-            and start enjoying the &apos;AquiVida&apos;—the good life, right
-            here.
+            Jeff Bist&apos;s Aquivida Pool Care is your trusted, local expert for
+            cleaning, repairs, and maintenance. We show up on time. We do it all.
+            Stop worrying about your pool and start enjoying it.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -129,7 +128,7 @@ export default function Home() {
       <section id="services" className="py-20 bg-background" aria-labelledby="services-heading">
         <div className="container mx-auto px-4">
           <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Your Complete &apos;AquiVida&apos; Solution
+            Your Complete &apos;Aquivida&apos; Solution
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => {
@@ -200,7 +199,7 @@ export default function Home() {
       <section className="py-20 bg-background" aria-labelledby="visual-proof-heading">
         <div className="container mx-auto px-4">
           <h2 id="visual-proof-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
-            From Green to &apos;AquiVida&apos; Clean
+            From Green to &apos;Aquivida&apos; Clean
           </h2>
           <div className="max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
             <BeforeAfterSlider
@@ -232,24 +231,24 @@ export default function Home() {
                 calendar.
               </p>
             </div>
-            <div className="text-center" role="article" aria-label="Step 2: Bist's Tech Arrives On Time">
+            <div className="text-center" role="article" aria-label="Step 2: Jeff's Tech Arrives On Time">
               <div className="w-16 h-16 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center" aria-hidden="true">
                 <Truck className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">
-                Bist&apos;s Tech Arrives On Time
+                Jeff&apos;s Tech Arrives On Time
               </h3>
               <p className="text-gray-600">
                 A certified, friendly technician arrives on your scheduled day.
                 No more guessing.
               </p>
             </div>
-            <div className="text-center" role="article" aria-label="Step 3: You Enjoy the AquiVida">
+            <div className="text-center" role="article" aria-label="Step 3: You Enjoy the Aquivida">
               <div className="w-16 h-16 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center" aria-hidden="true">
                 <Check className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">
-                You Enjoy the &apos;AquiVida&apos;
+                You Enjoy the &apos;Aquivida&apos;
               </h3>
               <p className="text-gray-600">
                 We handle everything. All you have to do is swim.
@@ -262,8 +261,8 @@ export default function Home() {
       {/* Section 6: Dual-Conversion Final CTA */}
       <section id="book" className="py-20 bg-background" aria-labelledby="cta-heading">
         <div className="container mx-auto px-4">
-          <h2 id="cta-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Ready to Start Your &apos;AquiVida&apos;?
+            <h2 id="cta-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Ready to Start Your &apos;Aquivida&apos;?
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Left Column: Book Now */}
@@ -294,7 +293,7 @@ export default function Home() {
                 <CardTitle id="get-quote-title" className="text-2xl mb-4">Have Questions?</CardTitle>
                 <CardDescription className="text-base">
                   Not sure what you need? Fill out our simple form, and our
-                  owner, Bist, may personally call you back with a free,
+                  owner, Jeff, may personally call you back with a free,
                   no-hassle quote.
                 </CardDescription>
               </CardHeader>
