@@ -20,6 +20,10 @@ const config: Config = {
         foreground: "var(--foreground)",
         muted: "var(--muted)",
       },
+      fontFamily: {
+        sans: ["var(--font-inter)", "sans-serif"],
+        heading: ["var(--font-space-grotesk)", "sans-serif"],
+      },
     },
   },
   plugins: [],

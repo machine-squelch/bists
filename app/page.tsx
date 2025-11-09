@@ -204,10 +204,10 @@ export default function Home() {
           </h2>
           <div className="max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
             <BeforeAfterSlider
-              beforeImage="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?w=1200&q=80&auto=format&fit=crop&crop=center&sat=-50&brightness=0.7"
-              afterImage="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?w=1200&q=80&auto=format&fit=crop&crop=center&sat=20&brightness=1.1"
-              beforeLabel="Before"
-              afterLabel="After"
+              beforeImage="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?w=1200&h=800&q=80&auto=format&fit=crop&sat=-50&brightness=0.6&hue=120"
+              afterImage="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?w=1200&h=800&q=80&auto=format&fit=crop&sat=40&brightness=1.2&contrast=1.1"
+              beforeLabel="Before - Green Pool"
+              afterLabel="After - Beautiful Pool"
             />
           </div>
         </div>
