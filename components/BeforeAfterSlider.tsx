@@ -1,6 +1,7 @@
 "use client"
 
 import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider"
+import Image from "next/image"
 
 interface BeforeAfterSliderProps {
   beforeImage: string
@@ -16,7 +17,7 @@ export function BeforeAfterSlider({
   afterLabel = "After",
 }: BeforeAfterSliderProps) {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full aspect-video">
       <ReactCompareSlider
         itemOne={
           <ReactCompareSliderImage
@@ -33,10 +34,10 @@ export function BeforeAfterSlider({
           />
         }
       />
-      <div className="absolute left-4 top-4 rounded bg-black/70 px-3 py-1.5 text-sm font-semibold text-white">
+      <div className="absolute left-4 top-4 rounded bg-black/70 px-3 py-1.5 text-sm font-semibold text-white z-10">
         {beforeLabel}
       </div>
-      <div className="absolute right-4 top-4 rounded bg-black/70 px-3 py-1.5 text-sm font-semibold text-white">
+      <div className="absolute right-4 top-4 rounded bg-black/70 px-3 py-1.5 text-sm font-semibold text-white z-10">
         {afterLabel}
       </div>
     </div>
