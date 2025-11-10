@@ -15,6 +15,9 @@
   --grey-300: #9CA3AF;
   --grey-800: #1F2937;
   --grey-900: #111827;
+  --blue-50: #EFF6FF;
+  --blue-100: #DBEAFE;
+  --blue-200: #BFDBFE;
 }
 
 * {

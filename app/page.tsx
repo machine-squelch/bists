@@ -6,7 +6,6 @@ import { TrustBadges } from "@/components/TrustBadges"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Carousel, CarouselItem } from "@/components/ui/carousel"
 import { QuoteForm } from "@/components/QuoteForm"
-import { BeforeAfterSlider } from "@/components/BeforeAfterSlider"
 import { VantaWaves } from "@/components/VantaWaves"
 import Image from "next/image"
 import {
@@ -219,13 +218,18 @@ export default function Home() {
           <h2 id="visual-proof-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             From Green to &apos;Aquivida&apos; Clean
           </h2>
-          <div className="max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl bg-gray-200">
-            <BeforeAfterSlider
-              beforeImage="/before.png"
-              afterImage="/after.png"
-              beforeLabel="Before - Green Pool"
-              afterLabel="After - Beautiful Pool"
-            />
+          <div className="max-w-6xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+            <div className="relative w-full aspect-[16/10] bg-gray-200">
+              <Image
+                src="/rad-pool.png"
+                alt="Beautiful pool transformation - crystal clear water"
+                fill
+                className="object-cover"
+                priority
+                quality={90}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -250,12 +254,12 @@ export default function Home() {
             </div>
             <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
               <Image
-                src="/gallery-3.gif"
-                alt="Pool service work"
+                src="/rad-pool.png"
+                alt="Pool cleaning in action"
                 fill
                 className="object-cover"
-                unoptimized
                 loading="lazy"
+                quality={85}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
@@ -268,6 +272,9 @@ export default function Home() {
                 unoptimized
                 loading="lazy"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                onError={(e) => {
+                  e.currentTarget.src = "/gallery-1.png"
+                }}
               />
             </div>
             <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
@@ -279,6 +286,9 @@ export default function Home() {
                 unoptimized
                 loading="lazy"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                onError={(e) => {
+                  e.currentTarget.src = "/gallery-1.png"
+                }}
               />
             </div>
             <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
@@ -290,11 +300,14 @@ export default function Home() {
                 unoptimized
                 loading="lazy"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                onError={(e) => {
+                  e.currentTarget.src = "/gallery-1.png"
+                }}
               />
             </div>
             <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
               <Image
-                src="/after.png"
+                src="/gallery-1.png"
                 alt="Pool transformation result"
                 fill
                 className="object-cover"
