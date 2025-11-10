@@ -30,7 +30,7 @@ const Sheet = ({ open, onOpenChange, children }: SheetProps) => {
         className="fixed inset-0 z-50 bg-black/50"
         onClick={() => onOpenChange(false)}
       />
-      <div className="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-background shadow-lg">
+      <div className="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-white shadow-lg">
         {children}
       </div>
     </>
