@@ -179,36 +179,69 @@ export default function Home() {
           <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             Hear From Your Neighbors
           </h2>
-          <Carousel className="max-w-4xl mx-auto px-12 md:px-0" aria-label="Customer testimonials">
+          {/* Desktop Carousel */}
+          <div className="hidden md:block">
+            <Carousel className="max-w-4xl mx-auto px-16" aria-label="Customer testimonials">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index}>
+                  <Card className="px-6 py-8" role="article" aria-label={`Testimonial from ${testimonial.name}`}>
+                    <CardHeader className="px-0">
+                      <div className="flex gap-1 mb-4" aria-label={`${testimonial.rating} star rating`}>
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="h-5 w-5 fill-secondary text-secondary"
+                            aria-hidden="true"
+                          />
+                        ))}
+                      </div>
+                      <CardDescription className="text-base leading-relaxed">
+                        &quot;{testimonial.text}&quot;
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="px-0">
+                      <p className="font-semibold text-foreground">
+                        {testimonial.name}
+                      </p>
+                      <p className="text-sm text-gray-600">
+                        {testimonial.location}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </Carousel>
+          </div>
+          
+          {/* Mobile Stacked */}
+          <div className="md:hidden space-y-6 max-w-2xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index}>
-                <Card className="mx-4 px-6 py-8" role="article" aria-label={`Testimonial from ${testimonial.name}`}>
-                  <CardHeader className="px-0">
-                    <div className="flex gap-1 mb-4" aria-label={`${testimonial.rating} star rating`}>
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="h-5 w-5 fill-secondary text-secondary"
-                          aria-hidden="true"
-                        />
-                      ))}
-                    </div>
-                    <CardDescription className="text-base leading-relaxed">
-                      &quot;{testimonial.text}&quot;
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="px-0">
-                    <p className="font-semibold text-foreground">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      {testimonial.location}
-                    </p>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
+              <Card key={index} className="px-6 py-8" role="article" aria-label={`Testimonial from ${testimonial.name}`}>
+                <CardHeader className="px-0">
+                  <div className="flex gap-1 mb-4" aria-label={`${testimonial.rating} star rating`}>
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="h-5 w-5 fill-secondary text-secondary"
+                        aria-hidden="true"
+                      />
+                    ))}
+                  </div>
+                  <CardDescription className="text-base leading-relaxed">
+                    &quot;{testimonial.text}&quot;
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="px-0">
+                  <p className="font-semibold text-foreground">
+                    {testimonial.name}
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    {testimonial.location}
+                  </p>
+                </CardContent>
+              </Card>
             ))}
-          </Carousel>
+          </div>
         </div>
       </section>
 
