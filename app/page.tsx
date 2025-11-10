@@ -143,7 +143,7 @@ export default function Home() {
       </section>
 
       {/* Section 2: Services Overview */}
-      <section id="services" className="py-20 bg-gray-50" aria-labelledby="services-heading">
+      <section id="services" className="py-20 bg-gray-200 border-t-2 border-b-2 border-gray-300 section-divider" aria-labelledby="services-heading">
         <div className="container mx-auto px-4">
           <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             Your Complete &apos;Aquivida&apos; Solution
@@ -175,7 +175,7 @@ export default function Home() {
       </section>
 
       {/* Section 3: Social Proof (Testimonials) */}
-      <section className="py-20 bg-white" aria-labelledby="testimonials-heading">
+      <section className="py-20 bg-white border-b-2 border-gray-200 section-divider" aria-labelledby="testimonials-heading">
         <div className="container mx-auto px-4">
           <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             Hear From Your Neighbors
@@ -214,7 +214,7 @@ export default function Home() {
       </section>
 
       {/* Section 4: Visual Proof */}
-      <section className="py-20 bg-gray-100" aria-labelledby="visual-proof-heading">
+      <section className="py-20 bg-gray-300 border-t-2 border-b-2 border-gray-400 section-divider" aria-labelledby="visual-proof-heading">
         <div className="container mx-auto px-4">
           <h2 id="visual-proof-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             From Green to &apos;Aquivida&apos; Clean
@@ -231,7 +231,7 @@ export default function Home() {
       </section>
 
       {/* Section 4.5: Gallery */}
-      <section className="py-20 bg-white" aria-labelledby="gallery-heading">
+      <section className="py-20 bg-white border-b-2 border-gray-200 section-divider" aria-labelledby="gallery-heading">
         <div className="container mx-auto px-4">
           <h2 id="gallery-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             Our Work in Action
@@ -295,7 +295,7 @@ export default function Home() {
       </section>
 
       {/* Section 5: How It Works */}
-      <section className="py-20 bg-gray-50" aria-labelledby="how-it-works-heading">
+      <section className="py-20 bg-gray-200 border-t-2 border-b-2 border-gray-300 section-divider" aria-labelledby="how-it-works-heading">
         <div className="container mx-auto px-4">
           <h2 id="how-it-works-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             Your Simple Path to a Perfect Pool
@@ -341,7 +341,7 @@ export default function Home() {
       </section>
 
       {/* Section 6: Dual-Conversion Final CTA */}
-      <section id="book" className="py-20 bg-white" aria-labelledby="cta-heading">
+      <section id="book" className="py-20 bg-white border-t-2 border-gray-200 section-divider" aria-labelledby="cta-heading">
         <div className="container mx-auto px-4">
             <h2 id="cta-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             Ready to Start Your &apos;Aquivida&apos;?
