@@ -5,6 +5,9 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
+  distDir: 'out',
+  // Disable any Vercel-specific optimizations
+  poweredByHeader: false,
 }
 
 module.exports = nextConfig
