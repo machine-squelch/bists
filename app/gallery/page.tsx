@@ -59,7 +59,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Before/After Showcase */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -100,7 +100,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">

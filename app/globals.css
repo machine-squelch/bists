@@ -9,6 +9,12 @@
   --background: #FFFFFF;
   --foreground: #1A202C;
   --muted: #F7FAFC;
+  --grey-50: #F9FAFB;
+  --grey-100: #F3F4F6;
+  --grey-200: #E5E7EB;
+  --grey-300: #D1D5DB;
+  --grey-800: #1F2937;
+  --grey-900: #111827;
 }
 
 * {

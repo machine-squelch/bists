@@ -129,7 +129,7 @@ export default function Home() {
       <TrustBadges />
 
       {/* Service Areas Banner */}
-      <section className="py-8 bg-primary text-white" aria-labelledby="service-areas-heading">
+      <section className="py-8 bg-gray-800 text-white" aria-labelledby="service-areas-heading">
         <div className="container mx-auto px-4">
           <div className="text-center">
             <p className="text-sm md:text-base font-medium mb-2" id="service-areas-heading">
@@ -143,7 +143,7 @@ export default function Home() {
       </section>
 
       {/* Section 2: Services Overview */}
-      <section id="services" className="py-20 bg-background" aria-labelledby="services-heading">
+      <section id="services" className="py-20 bg-gray-50" aria-labelledby="services-heading">
         <div className="container mx-auto px-4">
           <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             Your Complete &apos;Aquivida&apos; Solution
@@ -175,7 +175,7 @@ export default function Home() {
       </section>
 
       {/* Section 3: Social Proof (Testimonials) */}
-      <section className="py-20 bg-muted" aria-labelledby="testimonials-heading">
+      <section className="py-20 bg-white" aria-labelledby="testimonials-heading">
         <div className="container mx-auto px-4">
           <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             Hear From Your Neighbors
@@ -213,19 +213,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Separator 1 */}
-      <div className="relative w-full h-48 md:h-64 overflow-hidden">
-        <Image
-          src="/separator-1.jpg"
-          alt=""
-          fill
-          className="object-cover"
-          aria-hidden="true"
-        />
-      </div>
-
       {/* Section 4: Visual Proof */}
-      <section className="py-20 bg-background" aria-labelledby="visual-proof-heading">
+      <section className="py-20 bg-gray-100" aria-labelledby="visual-proof-heading">
         <div className="container mx-auto px-4">
           <h2 id="visual-proof-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             From Green to &apos;Aquivida&apos; Clean
@@ -242,7 +231,7 @@ export default function Home() {
       </section>
 
       {/* Section 4.5: Gallery */}
-      <section className="py-20 bg-muted" aria-labelledby="gallery-heading">
+      <section className="py-20 bg-white" aria-labelledby="gallery-heading">
         <div className="container mx-auto px-4">
           <h2 id="gallery-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             Our Work in Action
@@ -305,19 +294,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Separator 2 */}
-      <div className="relative w-full h-48 md:h-64 overflow-hidden">
-        <Image
-          src="/separator-2.jpg"
-          alt=""
-          fill
-          className="object-cover"
-          aria-hidden="true"
-        />
-      </div>
-
       {/* Section 5: How It Works */}
-      <section className="py-20 bg-muted" aria-labelledby="how-it-works-heading">
+      <section className="py-20 bg-gray-50" aria-labelledby="how-it-works-heading">
         <div className="container mx-auto px-4">
           <h2 id="how-it-works-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             Your Simple Path to a Perfect Pool
@@ -363,7 +341,7 @@ export default function Home() {
       </section>
 
       {/* Section 6: Dual-Conversion Final CTA */}
-      <section id="book" className="py-20 bg-background" aria-labelledby="cta-heading">
+      <section id="book" className="py-20 bg-white" aria-labelledby="cta-heading">
         <div className="container mx-auto px-4">
             <h2 id="cta-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             Ready to Start Your &apos;Aquivida&apos;?
