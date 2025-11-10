@@ -153,7 +153,7 @@ export default function Home() {
               return (
                 <Card
                   key={index}
-                  className="hover:shadow-lg transition-shadow cursor-pointer"
+                  className="hover:shadow-lg transition-shadow"
                   role="article"
                   aria-label={service.title}
                 >
@@ -179,7 +179,7 @@ export default function Home() {
           <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             Hear From Your Neighbors
           </h2>
-          <Carousel className="max-w-4xl mx-auto" aria-label="Customer testimonials">
+          <Carousel className="max-w-4xl mx-auto px-12 md:px-0" aria-label="Customer testimonials">
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index}>
                 <Card className="mx-4 px-6 py-8" role="article" aria-label={`Testimonial from ${testimonial.name}`}>

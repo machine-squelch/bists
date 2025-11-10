@@ -25,12 +25,12 @@ export function Carousel({ children, className }: CarouselProps) {
   return (
     <div className={cn("relative w-full", className)}>
       <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex">{children}</div>
+        <div className="flex md:flex-row flex-col gap-4">{children}</div>
       </div>
       <Button
         variant="outline"
         size="icon"
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/95 hover:bg-white shadow-lg border-2"
+        className="hidden md:flex absolute -left-12 top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-white shadow-lg border-2"
         onClick={scrollPrev}
         aria-label="Previous testimonial"
       >
@@ -39,12 +39,33 @@ export function Carousel({ children, className }: CarouselProps) {
       <Button
         variant="outline"
         size="icon"
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/95 hover:bg-white shadow-lg border-2"
+        className="hidden md:flex absolute -right-12 top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-white shadow-lg border-2"
         onClick={scrollNext}
         aria-label="Next testimonial"
       >
         <ChevronRight className="h-5 w-5" />
       </Button>
+      {/* Mobile navigation buttons */}
+      <div className="md:hidden flex justify-center gap-4 mt-6">
+        <Button
+          variant="outline"
+          size="icon"
+          className="bg-white shadow-lg border-2"
+          onClick={scrollPrev}
+          aria-label="Previous testimonial"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </Button>
+        <Button
+          variant="outline"
+          size="icon"
+          className="bg-white shadow-lg border-2"
+          onClick={scrollNext}
+          aria-label="Next testimonial"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </Button>
+      </div>
     </div>
   )
 }
@@ -57,7 +78,7 @@ export function CarouselItem({
   className?: string
 }) {
   return (
-    <div className={cn("min-w-0 shrink-0 grow-0 basis-full", className)}>
+    <div className={cn("min-w-0 shrink-0 grow-0 basis-full md:basis-full", className)}>
       {children}
     </div>
   )
