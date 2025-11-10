@@ -182,8 +182,8 @@ export default function Home() {
           <Carousel className="max-w-4xl mx-auto" aria-label="Customer testimonials">
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index}>
-                <Card className="mx-4" role="article" aria-label={`Testimonial from ${testimonial.name}`}>
-                  <CardHeader>
+                <Card className="mx-4 px-6 py-8" role="article" aria-label={`Testimonial from ${testimonial.name}`}>
+                  <CardHeader className="px-0">
                     <div className="flex gap-1 mb-4" aria-label={`${testimonial.rating} star rating`}>
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star
@@ -197,7 +197,7 @@ export default function Home() {
                       &quot;{testimonial.text}&quot;
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="px-0">
                     <p className="font-semibold text-foreground">
                       {testimonial.name}
                     </p>

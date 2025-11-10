@@ -40,17 +40,16 @@ export default function GalleryPage() {
             {galleryImages.map((image, index) => (
               <Card
                 key={index}
-                className="overflow-hidden hover:shadow-xl transition-shadow duration-300 group cursor-pointer"
+                className="overflow-hidden"
               >
                 <div className="relative aspect-video overflow-hidden">
                   <Image
                     src={image.src}
                     alt={image.alt}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-cover"
                     unoptimized={image.src.endsWith('.gif')}
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                 </div>
               </Card>
             ))}
