@@ -264,56 +264,35 @@ export default function Home() {
               />
             </div>
             <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
-              <Image
+              <img
+                src="/gallery-3.gif"
+                alt="Pool service work"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
+              <img
                 src="/gallery-4.gif"
                 alt="Pool service work"
-                fill
-                className="object-cover"
-                unoptimized
+                className="w-full h-full object-cover"
                 loading="lazy"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                onError={(e) => {
-                  e.currentTarget.src = "/gallery-1.png"
-                }}
               />
             </div>
             <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
-              <Image
+              <img
                 src="/gallery-5.gif"
                 alt="Pool service work"
-                fill
-                className="object-cover"
-                unoptimized
+                className="w-full h-full object-cover"
                 loading="lazy"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                onError={(e) => {
-                  e.currentTarget.src = "/gallery-1.png"
-                }}
               />
             </div>
             <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
-              <Image
+              <img
                 src="/gallery-6.gif"
                 alt="Pool service work"
-                fill
-                className="object-cover"
-                unoptimized
+                className="w-full h-full object-cover"
                 loading="lazy"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                onError={(e) => {
-                  e.currentTarget.src = "/gallery-1.png"
-                }}
-              />
-            </div>
-            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
-              <Image
-                src="/gallery-1.png"
-                alt="Pool transformation result"
-                fill
-                className="object-cover"
-                loading="lazy"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                quality={85}
               />
             </div>
           </div>
