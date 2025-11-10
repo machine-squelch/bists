@@ -241,7 +241,7 @@ export default function Home() {
             Our Work in Action
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg bg-gray-200">
               <Image
                 src="/gallery-1.png"
                 alt="Pool service work"
@@ -252,7 +252,7 @@ export default function Home() {
                 quality={85}
               />
             </div>
-            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg bg-gray-200">
               <Image
                 src="/rad-pool.png"
                 alt="Pool cleaning in action"
@@ -263,7 +263,7 @@ export default function Home() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
-            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg bg-gray-200">
               <img
                 src="/gallery-3.gif"
                 alt="Pool service work"
@@ -271,7 +271,7 @@ export default function Home() {
                 loading="lazy"
               />
             </div>
-            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg bg-gray-200">
               <img
                 src="/gallery-4.gif"
                 alt="Pool service work"
@@ -279,7 +279,7 @@ export default function Home() {
                 loading="lazy"
               />
             </div>
-            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg bg-gray-200">
               <img
                 src="/gallery-5.gif"
                 alt="Pool service work"
@@ -287,7 +287,7 @@ export default function Home() {
                 loading="lazy"
               />
             </div>
-            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg bg-gray-200">
               <img
                 src="/gallery-6.gif"
                 alt="Pool service work"
