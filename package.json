@@ -2,12 +2,17 @@
   "name": "reliable-pool-pros",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18.17.0",
+    "npm": ">=9.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "clean": "rm -rf node_modules .next package-lock.json"
+    "clean": "rm -rf node_modules .next package-lock.json yarn.lock pnpm-lock.yaml",
+    "clean-lock": "rm -f package-lock.json yarn.lock pnpm-lock.yaml"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
