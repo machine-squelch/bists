@@ -1,7 +1,7 @@
 "use client"
 
 import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider"
-import Image from "next/image"
+import { useState } from "react"
 
 interface BeforeAfterSliderProps {
   beforeImage: string
@@ -16,14 +16,21 @@ export function BeforeAfterSlider({
   beforeLabel = "Before",
   afterLabel = "After",
 }: BeforeAfterSliderProps) {
+  const [imagesLoaded, setImagesLoaded] = useState({ before: false, after: false })
+
   return (
-    <div className="relative w-full aspect-video">
+    <div className="relative w-full aspect-video bg-gray-200">
       <ReactCompareSlider
         itemOne={
           <ReactCompareSliderImage
             src={beforeImage}
             alt="Before"
             style={{ objectFit: "cover" }}
+            onLoad={() => setImagesLoaded(prev => ({ ...prev, before: true }))}
+            onError={(e) => {
+              console.error("Failed to load before image:", beforeImage)
+              e.currentTarget.style.display = 'none'
+            }}
           />
         }
         itemTwo={
@@ -31,6 +38,11 @@ export function BeforeAfterSlider({
             src={afterImage}
             alt="After"
             style={{ objectFit: "cover" }}
+            onLoad={() => setImagesLoaded(prev => ({ ...prev, after: true }))}
+            onError={(e) => {
+              console.error("Failed to load after image:", afterImage)
+              e.currentTarget.style.display = 'none'
+            }}
           />
         }
       />

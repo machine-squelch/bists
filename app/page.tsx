@@ -219,7 +219,7 @@ export default function Home() {
           <h2 id="visual-proof-heading" className="text-3xl md:text-4xl font-bold text-center mb-12">
             From Green to &apos;Aquivida&apos; Clean
           </h2>
-          <div className="max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+          <div className="max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl bg-gray-200">
             <BeforeAfterSlider
               beforeImage="/before.png"
               afterImage="/after.png"
@@ -237,57 +237,70 @@ export default function Home() {
             Our Work in Action
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
               <Image
                 src="/gallery-1.png"
                 alt="Pool service work"
                 fill
                 className="object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                quality={85}
               />
             </div>
-            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <Image
-                src="/gallery-2.gif"
-                alt="Pool service work"
-                fill
-                className="object-cover"
-                unoptimized
-              />
-            </div>
-            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
               <Image
                 src="/gallery-3.gif"
                 alt="Pool service work"
                 fill
                 className="object-cover"
                 unoptimized
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
-            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
               <Image
                 src="/gallery-4.gif"
                 alt="Pool service work"
                 fill
                 className="object-cover"
                 unoptimized
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
-            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
               <Image
                 src="/gallery-5.gif"
                 alt="Pool service work"
                 fill
                 className="object-cover"
                 unoptimized
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
-            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
               <Image
                 src="/gallery-6.gif"
                 alt="Pool service work"
                 fill
                 className="object-cover"
                 unoptimized
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-gray-200">
+              <Image
+                src="/after.png"
+                alt="Pool transformation result"
+                fill
+                className="object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                quality={85}
               />
             </div>
           </div>

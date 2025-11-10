@@ -52,6 +52,11 @@ h1, h2, h3, h4, h5, h6 {
   img, picture, video {
     content-visibility: auto;
   }
+  
+  /* Prevent layout shift */
+  img {
+    display: block;
+  }
 }
 
 /* Modern section dividers */
