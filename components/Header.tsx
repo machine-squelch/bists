@@ -94,8 +94,8 @@ export function Header() {
 
       {/* Mobile Menu Sheet */}
       <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-        <SheetContent onClose={() => setMobileMenuOpen(false)} className="bg-white h-full">
-          <div className="flex flex-col gap-6 p-6 bg-white h-full">
+        <SheetContent onClose={() => setMobileMenuOpen(false)} className="bg-white h-full opacity-100">
+          <div className="flex flex-col gap-6 p-6 bg-white h-full opacity-100">
             {/* Mobile CTAs at top */}
             <div className="flex flex-col gap-3 border-b pb-6">
               <Button

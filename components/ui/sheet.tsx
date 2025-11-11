@@ -31,7 +31,7 @@ const Sheet = ({ open, onOpenChange, children }: SheetProps) => {
         onClick={() => onOpenChange(false)}
       />
       <div className="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-white shadow-xl border-l border-gray-200">
-        <div className="h-full w-full bg-white">
+        <div className="h-full w-full bg-white opacity-100">
           {children}
         </div>
       </div>
@@ -48,7 +48,8 @@ const SheetContent = React.forwardRef<
   return (
     <div
       ref={ref}
-      className={cn("flex h-full flex-col", className)}
+      className={cn("flex h-full flex-col bg-white opacity-100", className)}
+      style={{ backgroundColor: '#ffffff', opacity: 1 }}
       {...props}
     >
       {onClose && (
